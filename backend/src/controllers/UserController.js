@@ -82,7 +82,8 @@ class UserController {
 
     async viewUser(req, res) {
         try {
-            const serviceResponse = await UserService.view()
+            const { mobile } = req.query
+            const serviceResponse = await UserService.view(mobile)
 
             return res.status(200).send({ err: false, response: serviceResponse, msg: "Success" })
 

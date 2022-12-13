@@ -1,9 +1,9 @@
 import Axios from 'axios'
 
 class HomeService {
-    static viewUsers = async () => {
+    static viewUsers = async (mobile) => {
         try {
-            const data = await Axios.get(`http://localhost:3000/view`, {
+            const data = await Axios.get(`http://localhost:3000/view`, {params: {mobile}}, {
                 headers: {
                     'Access-Control-Allow-Origin': '*',
                     'Content-Type': 'application/json',

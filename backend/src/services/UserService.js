@@ -14,7 +14,7 @@ class UserService {
 
         } catch (error) {
             console.log(error)
-            return { err: true, status: 500, msg: "Internal Server Error"}
+            return { err: true, status: 500, msg: "Internal Server Error" }
         }
 
     }
@@ -31,7 +31,7 @@ class UserService {
 
         } catch (error) {
             console.log(error)
-            return { err: true, status: 500, msg: "Internal Server Error"}
+            return { err: true, status: 500, msg: "Internal Server Error" }
         }
 
     }
@@ -46,20 +46,28 @@ class UserService {
 
         } catch (error) {
             console.log(error)
-            return { err: true, status: 500, msg: "Internal Server Error"}
+            return { err: true, status: 500, msg: "Internal Server Error" }
         }
 
     }
 
-    async view() {
+    async view(mobile) {
         try {
-            const allUsers = await UserModel.find()
 
-            return allUsers
+            if (mobile) {
+                const filterUsers = await UserModel.find({mobile})
+                return filterUsers
+            }   
+
+            else {
+                const allUsers = await UserModel.find()
+                return allUsers
+            }
+
 
         } catch (error) {
             console.log(error)
-            return { err: true, status: 500, msg: "Internal Server Error"}
+            return { err: true, status: 500, msg: "Internal Server Error" }
         }
 
     }

@@ -21,5 +21,5 @@ Content-Type: application/json
     "mobile": "8758671867"
 }
 ###
-GET http://localhost:3000/view
+GET http://localhost:3000/view?mobile=9878987678
 Content-Type: application/json
