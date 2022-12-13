@@ -1,0 +1,42 @@
+.scroller {
+    height: 1.2em;
+    line-height: 1.2em;
+    position: relative;
+    font-size: 100px;
+    width: 50%;
+    text-align: center;
+    left: 10%;
+    top: 200px
+  }
+
+  .scroller > span {
+    position: absolute;
+    top: 0;
+    animation: slide 0.5s reverse ;
+    font-weight: bold;
+    background-color: white;
+    animation-iteration-count: 1;
+  }
+  @keyframes slide {
+    0% {
+      top: 0;
+    }
+    75% {
+      top: -3.6em;
+    }
+  }
+
+  .createUser {
+    position: absolute;
+    top: 10%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } 
+
+  .viewUser {
+    position: absolute;
+    top: 10%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 10px
+  } 

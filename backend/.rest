@@ -1,0 +1,25 @@
+POST http://localhost:3000/createUser
+Content-Type: application/json
+
+{
+    "name": "Viren",
+    "mobile": "9878987678"
+}
+###
+POST http://localhost:3000/updateUser
+Content-Type: application/json
+
+{
+    "name": "Virendra",
+    "mobile": "9878987678"
+}
+###
+POST http://localhost:3000/deleteUser
+Content-Type: application/json
+
+{
+    "mobile": "8758671867"
+}
+###
+GET http://localhost:3000/view
+Content-Type: application/json
